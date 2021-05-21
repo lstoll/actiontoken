@@ -33,6 +33,7 @@ jobs:
             --header 'content-type: application/json'
 
       - name: Write token to file
+        # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#permissions
         run: |
           echo '${{ secrets.GITHUB_TOKEN }}' > ~/.github_token
 
